@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ChildComponent } from './child.component';
 
 // @Component({
 //   selector: 'app-root',
@@ -25,12 +26,17 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-user',
   template: `
-    Username: {{ username }}
+  <div>
+    Username: {{ name }}
+    -
+    Job: {{job}}
+  </div>
   `,
   standalone: true,
 })
 export class UserComponent {
-  username = 'youngTech';
+  @Input() job = ""
+  @Input() name = ""
 }
 
 // @Component({
@@ -46,15 +52,36 @@ export class UserComponent {
 // }
 @Component({
   selector: 'app-root',
+  styles: [
+    'img{height: 20em;}'
+  ],
   template: `
+  <div [contentEditable]='isEditable'></div>
   @for(user of users; track user.id){
-    <p>{{user.name}}</p>
+    <p (mouseover)='onMouseOver()' (mouseout)='onMouseBlur()'>{{message}} {{user.name}}</p>
   }
+  <div><img alt="photo" [src]="imageURL"></div>
+  <app-user job='angular developer' name='xuso'/>
+  <app-child (addItemEvent)='addItem($event)'/>
+  <p>{{message}}</p>
   `,
   standalone: true,
-  imports: [UserComponent],
+  imports: [UserComponent, ChildComponent],
 })
 export class AppComponent {
   operatingSystems = [{ id: 'win', name: 'Windows' }, { id: 'osx', name: 'MacOS' }, { id: 'linux', name: 'Linux' }]
   users = [{ id: 0, name: 'Sarah' }, { id: 1, name: 'Amy' }, { id: 2, name: 'Rachel' }, { id: 3, name: 'Jessica' }, { id: 4, name: 'Poornima' }]
+  isEditable = true
+  imageURL = 'https://ethic.es/wp-content/uploads/2023/03/imagen.jpg'
+  message = ""
+  onMouseOver() {
+    this.message = 'way to go!'
+  }
+  onMouseBlur() {
+    this.message = ""
+  }
+  addItem(item: string) {
+    this.message = item
+  }
 }
+
