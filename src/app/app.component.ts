@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ChildComponent } from './child.component';
 import { CommentsComponent } from './comments.components';
+import { NgOptimizedImage } from "@angular/common";
 
 // @Component({
 //   selector: 'app-root',
@@ -40,21 +41,11 @@ export class UserComponent {
   @Input() name = ""
 }
 
-// @Component({
-//   selector: 'app-root',
-//   template: `
-//   @if (isServerUp){<h1>SERVER IS RUNNING</h1>}
-//   @else{<h1>SERVER IS DEAD</h1>}`,
-//   standalone: true,
-//   imports: [UserComponent],
-// })
-// export class AppComponent {
-//   isServerUp = true
-// }
 @Component({
   selector: 'app-root',
   styles: [
-    'img{height: 20em;}'
+    'img{height: 20em;}',
+    '.imgDiv{height:20em; width:20em; background-color:red; position: fixed;}'
   ],
   template: `
   <div [contentEditable]='isEditable'></div>
@@ -72,9 +63,12 @@ export class UserComponent {
   } @loading {
     <p>Loading list...</p>
   }
+  <div class="imgDiv">
+    <img [ngSrc]='logoUrl' [alt]='logoAlt' fill/>
+  </div>
   `,
   standalone: true,
-  imports: [UserComponent, ChildComponent, CommentsComponent],
+  imports: [UserComponent, ChildComponent, CommentsComponent, NgOptimizedImage],
 })
 export class AppComponent {
   operatingSystems = [{ id: 'win', name: 'Windows' }, { id: 'osx', name: 'MacOS' }, { id: 'linux', name: 'Linux' }]
@@ -91,5 +85,7 @@ export class AppComponent {
   addItem(item: string) {
     this.message = item
   }
+  logoUrl = './favicon.ico'
+  logoAlt = 'Angular logo'
 }
 
