@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ChildComponent } from './child.component';
+import { CommentsComponent } from './comments.components';
 
 // @Component({
 //   selector: 'app-root',
@@ -64,9 +65,16 @@ export class UserComponent {
   <app-user job='angular developer' name='xuso'/>
   <app-child (addItemEvent)='addItem($event)'/>
   <p>{{message}}</p>
+  @defer{
+    <comments/>
+  } @placeholder {
+    <p>List about to show up</p>
+  } @loading {
+    <p>Loading list...</p>
+  }
   `,
   standalone: true,
-  imports: [UserComponent, ChildComponent],
+  imports: [UserComponent, ChildComponent, CommentsComponent],
 })
 export class AppComponent {
   operatingSystems = [{ id: 'win', name: 'Windows' }, { id: 'osx', name: 'MacOS' }, { id: 'linux', name: 'Linux' }]
