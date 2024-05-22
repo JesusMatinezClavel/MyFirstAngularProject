@@ -1,29 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { ChildComponent } from './child.component';
 import { CommentsComponent } from './comments.components';
 import { NgOptimizedImage } from "@angular/common";
-
-// @Component({
-//   selector: 'app-root',
-//   standalone: true,
-//   imports: [RouterOutlet],
-//   templateUrl: './app.component.html',
-//   styleUrl: './app.component.css'
-// })
-// export class AppComponent {
-//   title = 'myAngular';
-// }
-
-// @Component({
-//   selector: 'app-root',
-//   template: `Hello {{city}}, {{1+1}}`,
-//   styles: `:host {color:red}`,
-//   standalone: true
-// })
-// export class AppComponent {
-//   city = 'Valencia'
-// }
+import { RouterOutlet } from "@angular/router";
 
 @Component({
   selector: 'app-user',
@@ -41,6 +20,7 @@ export class UserComponent {
   @Input() name = ""
 }
 
+
 @Component({
   selector: 'app-root',
   styles: [
@@ -49,6 +29,12 @@ export class UserComponent {
   ],
   template: `
   <div [contentEditable]='isEditable'></div>
+  <nav>
+    <a href="/">Home</a>
+    |
+    <a href="/user">User</a>
+  </nav>
+  <router-outlet />
   @for(user of users; track user.id){
     <p (mouseover)='onMouseOver()' (mouseout)='onMouseBlur()'>{{message}} {{user.name}}</p>
   }
@@ -68,7 +54,7 @@ export class UserComponent {
   </div>
   `,
   standalone: true,
-  imports: [UserComponent, ChildComponent, CommentsComponent, NgOptimizedImage],
+  imports: [UserComponent, ChildComponent, CommentsComponent, NgOptimizedImage,RouterOutlet],
 })
 export class AppComponent {
   operatingSystems = [{ id: 'win', name: 'Windows' }, { id: 'osx', name: 'MacOS' }, { id: 'linux', name: 'Linux' }]
