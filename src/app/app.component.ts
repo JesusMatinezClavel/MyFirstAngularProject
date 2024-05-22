@@ -30,9 +30,9 @@ export class UserComponent {
   template: `
   <div [contentEditable]='isEditable'></div>
   <nav>
-    <a href="/">Home</a>
+    <a href="">Home</a>
     |
-    <a href="/user">User</a>
+    <a href="/profile">Profile</a>
   </nav>
   <router-outlet />
   @for(user of users; track user.id){
