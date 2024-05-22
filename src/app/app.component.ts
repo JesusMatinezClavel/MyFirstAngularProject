@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { ChildComponent } from './child.component';
-import { CommentsComponent } from './comments.components';
+import { CommentsComponent } from './common/comments/comments.components';
 import { NgOptimizedImage } from "@angular/common";
-import { RouterOutlet } from "@angular/router";
+import { RouterOutlet, RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-user',
@@ -28,13 +28,13 @@ export class UserComponent {
     '.imgDiv{height:20em; width:20em; background-color:red; position: fixed;}'
   ],
   template: `
-  <div [contentEditable]='isEditable'></div>
   <nav>
-    <a href="">Home</a>
+    <a routerLink="/home">Home</a>
     |
-    <a href="/profile">Profile</a>
+    <a routerLink="/profile">Profile</a>
   </nav>
-  <router-outlet />
+  <router-outlet/>
+  <div [contentEditable]='isEditable'></div>
   @for(user of users; track user.id){
     <p (mouseover)='onMouseOver()' (mouseout)='onMouseBlur()'>{{message}} {{user.name}}</p>
   }
@@ -54,7 +54,7 @@ export class UserComponent {
   </div>
   `,
   standalone: true,
-  imports: [UserComponent, ChildComponent, CommentsComponent, NgOptimizedImage,RouterOutlet],
+  imports: [UserComponent, ChildComponent, CommentsComponent, NgOptimizedImage, RouterOutlet, RouterLink],
 })
 export class AppComponent {
   operatingSystems = [{ id: 'win', name: 'Windows' }, { id: 'osx', name: 'MacOS' }, { id: 'linux', name: 'Linux' }]

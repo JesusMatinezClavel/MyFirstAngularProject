@@ -5,12 +5,12 @@ import { ProfileComponent } from "./pages/profile/profile.component";
 
 export const routes: Routes = [
     {
-        path: '',
+        path: 'home',
         title:'Home Page',
         component: HomeComponent
     },
     {
-        path: '/profile',
+        path: 'profile',
         title: 'Profile page',
         component: ProfileComponent
     }
