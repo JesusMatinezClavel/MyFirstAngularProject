@@ -1,9 +1,11 @@
-.root{
-    height: 100vh;
+.header-view{
+    height: 20vh;
     width: 100vw;
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    background-color: antiquewhite;
 }

@@ -1,0 +1,11 @@
+.profile-view{
+    min-height: 80vh;
+    height: auto;
+    width: 100vw;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    background-color: rgb(127, 157, 255);
+}

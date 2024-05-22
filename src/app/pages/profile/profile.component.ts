@@ -2,8 +2,9 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-profile',
+  styleUrl:'./profile.component.css',
   template: `
-    <div>Profile Page</div>
+    <div class="profile-view">Profile Page</div>
   `,
   standalone: true,
 })

@@ -1,0 +1,20 @@
+.home-view {
+  min-height: 80vh;
+  height: auto;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: aquamarine;
+}
+img {
+  height: 20em;
+}
+.imgDiv {
+  height: 20em;
+  width: 20em;
+  background-color: red;
+  position: fixed;
+}
