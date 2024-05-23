@@ -12,24 +12,6 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   styleUrls: ['./home.component.css'],
   template: `
     <div class="home-view">Home Page</div>
-    <!-- <div [contentEditable]='isEditable'></div>
-  @for(user of users; track user.id){
-    <p (mouseover)='onMouseOver()' (mouseout)='onMouseBlur()'>{{message}} {{user.name}}</p>
-  }
-  <div><img alt="photo" [src]="imageURL"></div>
-  <app-user job='angular developer' name='xuso'/>
-  <app-child (addItemEvent)='addItem($event)'/>
-  <p>{{message}}</p>
-  @defer{
-    <comments/>
-  } @placeholder {
-    <p>List about to show up</p>
-  } @loading {
-    <p>Loading list...</p>
-  }
-  <div class="imgDiv">
-    <img [ngSrc]='logoUrl' [alt]='logoAlt' fill/>
-  </div>  -->
   `,
   standalone: true,
   imports: [UserComponent, ChildComponent, CommentsComponent, NgOptimizedImage, HeaderComponent,RouterOutlet, RouterLink],

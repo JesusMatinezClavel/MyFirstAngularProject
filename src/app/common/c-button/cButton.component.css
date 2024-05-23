@@ -1,0 +1,25 @@
+.cbutton-design{
+    height: auto;
+    width: auto;
+
+    padding: .5em 1em;
+
+    margin: .5em .5em;
+
+    color: white;
+
+    border: .1em solid darkgrey;
+    border-radius: .5em;
+
+    background-color: rgb(74, 106, 134);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        background-color: rgb(129, 183, 231);
+    }
+    &:active{
+        transform: translateY(.1em);
+    }
+}
