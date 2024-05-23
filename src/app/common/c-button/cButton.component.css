@@ -8,16 +8,16 @@
 
     color: white;
 
-    border: .1em solid darkgrey;
+    border: .1em solid rgba(0, 0, 0, 0.205);
     border-radius: .5em;
 
-    background-color: rgb(74, 106, 134);
+    background-color: #88b8a9;
 
     display: flex;
     justify-content: center;
     align-items: center;
     &:hover{
-        background-color: rgb(129, 183, 231);
+        background-color: #8fc2b2;
     }
     &:active{
         transform: translateY(.1em);

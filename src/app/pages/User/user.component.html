@@ -1,0 +1,12 @@
+<div class="user-design">
+  <p>username: {{ username }}</p>
+  <p>{{ username }}'s favorite framework: {{ favoriteFramework }}</p>
+  <label for="username">
+    User's name:
+    <input id="username" type="text" [(ngModel)]="username" />
+  </label>
+  <label for="framework">
+    Favorite framework:
+    <input id="framework" type="text" [(ngModel)]="favoriteFramework" />
+  </label>
+</div>

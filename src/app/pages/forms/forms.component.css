@@ -1,10 +1,11 @@
-.footer-design {
-    height: 10vh;
+.formsView-design{
+    min-height: 80vh;
+    height: auto;
     width: 100vw;
   
     display: flex;
     justify-content: center;
     align-items: center;
   
-    background-color:#b2cbae;
-  }
+    background-color:#dbddb4;
+}

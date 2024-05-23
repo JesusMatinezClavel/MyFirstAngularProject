@@ -3,7 +3,7 @@ import {Component} from '@angular/core';
 @Component({
   selector: 'app-profile',
   styleUrl:'./profile.component.css',
-  templateUrl:'./home.component.html' ,
+  templateUrl:'./profile.component.html' ,
   standalone: true,
 })
 export class ProfileComponent {}
