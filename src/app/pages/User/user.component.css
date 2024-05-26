@@ -1,8 +1,40 @@
-.user-design{
-    height: 20em;
-    width: 20em;
+.user-design {
+  height: auto;
+  width: auto;
 
-    padding: 1em 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    background-color: #76877d;
+  padding: .5em .5em;
+
+  border: 0.4em solid rgba(0, 0, 0, 0.041);
+  border-radius: 0.5em;
+
+  box-shadow: 0.2em 0.2em 2em 1em rgba(0, 0, 0, 0.226),
+    0.5em 0.5em 1em 1em rgba(63, 63, 63, 0.226);
+
+  background-color: #76877d;
+}
+
+.user-design input,
+.user-design p {
+  margin: 0.5em;
+}
+
+.userForm,
+.userProfile {
+  margin: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.separator {
+  height: 10em;
+  width: 0.05em;
+
+  margin: 1em;
+  background-color: aliceblue;
 }

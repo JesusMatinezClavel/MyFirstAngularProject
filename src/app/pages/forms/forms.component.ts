@@ -1,5 +1,7 @@
 import { Component, Input } from "@angular/core";
 
+import { ReactiveFormsModule, FormControl, FormGroup } from "@angular/forms";
+
 import { UserComponent } from "../user/user.component";
 
 @Component({
@@ -9,4 +11,6 @@ import { UserComponent } from "../user/user.component";
     standalone: true,
     imports: [UserComponent]
 })
-export class FormsViewComponent {}
+export class FormsViewComponent {
+
+}

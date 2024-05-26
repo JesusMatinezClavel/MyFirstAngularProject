@@ -4,3 +4,9 @@
 
     background-color: aqua;
 }
+
+.separator{
+    height: 10em;
+    width: .5em;
+    background-color: aliceblue;
+}
