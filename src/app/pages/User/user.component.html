@@ -1,27 +1,25 @@
 <div class="user-design">
   <div class="userProfile">
-    <h1>Name:</h1>
-    <p>{{ userProfileForm.value.name }}</p>
-    <h1>Email:</h1>
-    <p>{{ userProfileForm.value.email }}</p>
-    <h1>Password:</h1>
-    <p>{{ userProfileForm.value.password }}</p>
+    <p><span class="title">Name</span> {{ userName }}</p>
+    <p><span class="title">Email</span> {{ userEmail }}</p>
+    <p><span class="title">Password</span> {{ userPassword }}</p>
   </div>
   <div class="separator"></div>
-  <form [formGroup]="userProfileForm">
+  <form [formGroup]="userProfileForm" (ngSubmit)="handleSubmit()">
     <div class="userForm">
       <label>
+        Name:
         <input type="text" formControlName="name" />
       </label>
       <label>
-        Email: {{ userProfileForm.value.email }}
+        Email:
         <input type="text" formControlName="email" />
       </label>
       <label>
-        Password: {{ userProfileForm.value.password }}
+        Password:
         <input type="password" formControlName="password" />
       </label>
-      <button type="submit">Submit</button>
+      <cButton title="Submit" [disabled]="userProfileForm.valid" (onClick)="handleSubmit()"/>
     </div>
   </form>
 </div>

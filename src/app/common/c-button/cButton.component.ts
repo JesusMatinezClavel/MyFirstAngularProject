@@ -8,9 +8,10 @@ import { Component, Input } from "@angular/core";
 })
 export class CustomButton {
     @Input() title: string = ""
+    @Input() disabled: boolean = false;
     @Input() onClick: Function = () => { }
 
     handleClick() {
         this.onClick()
-    }
+    }    
 }

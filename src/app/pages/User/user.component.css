@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
 
-  padding: .5em .5em;
+  /* padding: .5em .5em; */
 
   border: 0.4em solid rgba(0, 0, 0, 0.041);
   border-radius: 0.5em;
@@ -19,14 +19,25 @@
 
 .user-design input,
 .user-design p {
-  margin: 0.5em;
+  margin: 0.em;
+}
+
+.title{
+  color: #43524d;
+  width: auto;
+  padding-left: .2em;
+  padding-right: .2em;
+  font-size:1.2em;
+  font-weight: bold;
+  border-bottom: .15em solid #88b8a9;
+  border-radius: .2em;
 }
 
 .userForm,
 .userProfile {
   margin: 3em;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
 }
