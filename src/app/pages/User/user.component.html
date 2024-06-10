@@ -19,7 +19,8 @@
         Password:
         <input type="password" formControlName="password" />
       </label>
-      <cButton title="Submit" [disabled]="userProfileForm.valid" (onClick)="handleSubmit()"/>
+      <cButton title="Submit" (onClick)="handleSubmit()" />
+      <div class="error">{{ errorMsg }}</div>
     </div>
   </form>
 </div>
