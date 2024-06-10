@@ -7,6 +7,5 @@ import { Component, Input } from "@angular/core";
     standalone: true
 })
 export class CustomCard {
-    @Input() children: any
     @Input() title: string = ''
 }

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { NgFor } from "@angular/common";
 
 import { CustomCard } from "../../common/c-card/cCard.component";
 
@@ -7,8 +8,8 @@ import { CustomCard } from "../../common/c-card/cCard.component";
   styleUrl: './profile.component.css',
   templateUrl: './profile.component.html',
   standalone: true,
-  imports: [CustomCard]
+  imports: [CustomCard, NgFor]
 })
 export class ProfileComponent {
-  @Input() test: string = 'hola, que tal?'
+  @Input() test: string = 'Card content'
 }
