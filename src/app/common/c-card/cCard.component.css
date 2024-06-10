@@ -1,0 +1,36 @@
+.card-design {
+  min-height: 5em;
+  min-width: 5em;
+  padding: 0.5em 1em;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: #dbddb4;
+
+  border: 0.1em solid darkgrey;
+  border-radius: 0.5em;
+  box-shadow: 0em 0em 0.89em 0.2em grey;
+}
+
+.card-title {
+  min-height: 1em;
+  height: auto;
+  width: 100%;
+
+  text-decoration: underline;
+
+  text-align: center;
+}
+
+.card-content{
+    min-height: 3em;
+    height: auto;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
